@@ -1,20 +1,27 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center justify-center bg-slate-800 text-center w-screen h-screen'>
-      <p className='text-3xl'>My Super Awesome portfolio website 🚀</p>
+    <div className=' bg-gray-800 w-screen h-screen'>
+      <div className='flex flex-row w-screen items-center h-10 border-b-2  border-violet-400'>
+        <p className='flex-1 text-2xl text-violet-400'>adb.</p>
+        <nav className='flex-1 text-violet-400 '>
+          <Link href='/skills' >Skills</Link>
+          <Link href='/skills' >Skills</Link>
+          <Link href='/skills' >Skills</Link>
+          <Link href='/skills' >Skills</Link>
+        </nav>
 
-      <p className='text-2xl'>Hi 👋, potential employer</p>
-      <p className='text-1xl'>Checkout these awesome pages below 👇 </p>
-      <Link className='w-1/5 m-2 h-max pb-2 pt-2 hover:bg-slate-500 rounded-lg text-2xl bg-slate-600 ' href='/skills'>Skills 🧬</Link>
-      <Link className='w-1/5 m-2 h-max pb-2 pt-2 hover:bg-slate-500 rounded-lg text-2xl bg-slate-600 ' href='/projects'>Projects 💻</Link>
-      <Link className='w-1/5 m-2 h-max pb-2 pt-2 hover:bg-slate-500 rounded-lg text-2xl bg-slate-600 ' href='/education'>Education 👨‍🎓</Link>
-      <Link className='w-1/5 m-2 h-max pb-2 pt-2 hover:bg-slate-500 rounded-lg text-2xl bg-slate-600 ' href='/contact'>️
+        <div>
+          <Image src='./public/my_pic.jgp' width={50} height={50}
 
-        Contact ☎
-      </Link>
+            alt='my profile picture' />
+
+        </div>
+
+      </div>
     </div>
   )
 }
