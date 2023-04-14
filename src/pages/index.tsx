@@ -4,14 +4,18 @@ import Layout from '@/components/layout'
 export default function Home() {
   return (
     <Layout page_title='ADB Porfolio Home'>
+      <div className='flex flex-col w-screen h-3/4 bg-indigo-500 items-center'>
 
+        <div className=' w-5/6 flex flex-col items-center  bg-amber-300   p-4'>
+          <Image src='/images/my_pic.jpg' className=' rounded-full'
 
-      <div className=' flex flex-col w-screen bg-amber-300 h-screen items-center p-4'>
-        <Image src='/images/my_pic.jpg' width={200} height={200}
+            width={20} height={20}
 
-          alt='my profile picture' />
+            alt='my profile picture' />
 
+        </div>
       </div>
+
     </Layout>
   )
 }
