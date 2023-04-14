@@ -1,26 +1,17 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import Layout from '@/components/layout'
 
 export default function Home() {
   return (
-    <div className=' bg-zinc-600 w-screen h-screen'>
-      <div className='flex flex-row w-screen items-center h-10 border-b-2  border-violet-400'>
-        <p className='flex-1 text-2xl text-violet-400'>adb.</p>
-        <nav className='flex-2 text-violet-400 '>
-          <Link href='/skills' >Skills</Link>
-          <Link href='/skills' >Skills</Link>
-          <Link href='/skills' >Skills</Link>
-          <Link href='/skills' >Skills</Link>
-        </nav>
+    <Layout page_title='ADB Porfolio Home'>
 
 
-      </div>
-      <div>
-        <Image src='/images/my_pic.jpg' width={50} height={50}
+      <div className=' flex flex-col w-screen bg-amber-300 h-screen items-center p-4'>
+        <Image src='/images/my_pic.jpg' width={200} height={200}
 
           alt='my profile picture' />
 
       </div>
-    </div>
+    </Layout>
   )
 }
