@@ -3,7 +3,7 @@ import NavLinks from './navlinks'
 
 import Link from 'next/link'
 
-const linkList: string[] = ['Skills', 'Education', 'Contact', 'Projects']
+const linkList: string[] = ['Skills', 'Resume', 'Contact', 'Projects']
 
 const NavBar = () => {
     return (
