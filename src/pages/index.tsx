@@ -3,7 +3,7 @@ import Layout from '@/components/layout'
 
 export default function Home() {
   return (
-    <Layout page_title='ADB Porfolio Home'>
+    <Layout page_title='ADB Porfolio : Home'>
       <div className='flex flex-col w-screen h-3/4  items-center'>
 
         <div className=' w-5/6 flex flex-col items-center  bg-amber-300 m-10 '>
