@@ -1,5 +1,5 @@
 import { IconType } from "react-icons"
-import { FaTwitter, FaFacebook, FaLinkedinIn, } from "react-icons/fa"
+import { FaTwitter, FaFacebook, FaLinkedinIn, FaGithub, } from "react-icons/fa"
 
 
 interface socialProps {
@@ -10,12 +10,13 @@ interface socialProps {
 const SocialButton = ({ icon_type, social_link }: socialProps) => {
     let iconMap = new Map<string, JSX.Element>();
 
-    iconMap.set('facebook', <FaFacebook className=" text-violet-400" />)
-    iconMap.set('twitter', <FaTwitter className="text-violet-400" />)
-    iconMap.set('linkedin', <FaLinkedinIn className="text-violet-400" />)
+    iconMap.set('facebook', <FaFacebook className=" text-violet-400 group-hover:text-zinc-600" />)
+    iconMap.set('twitter', <FaTwitter className="text-violet-400 group-hover:text-zinc-600" />)
+    iconMap.set('linkedin', <FaLinkedinIn className="text-violet-400 group-hover:text-zinc-600" />)
+    iconMap.set('github', <FaGithub className="text-violet-400 group-hover:text-zinc-600" />)
 
     return (
-        <a target="_blank" href={social_link} className=" w-8 h-8 rounded-full flex items-center justify-center bg-zinc-600 outline-2 outline outline-violet-400 hover:scale-125  hover:bg-violet-400 hover:text-zinc-600 transition ease-in-out">
+        <a target="_blank" href={social_link} className=" w-8 h-8 rounded-full flex items-center justify-center bg-zinc-600 outline-2 outline outline-violet-400 hover:bg-violet-400 hover:outline-zinc-600  transition-transform ease-linear hover:scale-150 group">
             {iconMap.get(icon_type)}
 
         </a>
