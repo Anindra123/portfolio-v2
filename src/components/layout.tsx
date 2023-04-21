@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { FunctionComponent, ReactNode, ReactPropTypes } from 'react'
 import NavBar from './navbar'
+import MobileNavScreen from './mobileNavScreen'
 
 interface IChildrenProp {
     children: ReactNode,
@@ -13,7 +14,7 @@ export default function Layout({ children, page_title }: IChildrenProp) {
 
     return (
 
-        <div className=' bg-zinc-600 w-screen h-screen'>
+        <div className=' bg-zinc-600 w-screen h-screen '>
             <Head>
                 <title>{page_title}</title>
             </Head>
