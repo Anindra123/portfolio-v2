@@ -1,14 +1,15 @@
+import { forwardRef } from "react"
 
 
-const MobileNavScreen = () => {
+const MobileNavScreen = forwardRef((props, ref) => {
     return (
 
-        <div className=" bg-lime-400 w-screen h-screen absolute left-1/2 md:hidden">
+        <div ref={ref} className=" bg-lime-400 w-screen h-screen fixed translate-x-full transition-all ease-in-out opacity-50  md:hidden">
 
         </div>
     )
 
-}
+});
 
 
 export default MobileNavScreen
