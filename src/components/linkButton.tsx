@@ -2,14 +2,15 @@
 interface ILinkButtonProp {
     link: string;
     button_name: string;
+    style: string;
 }
 
-const LinkButton = ({ link, button_name }: ILinkButtonProp) => {
+const LinkButton = ({ link, button_name, style }: ILinkButtonProp) => {
 
     return (
 
         <a href={link} target="_blank" rel="noopener noreferrer"
-            className="px-8 py-2 bg-violet-400 text-indigo-100 rounded-3xl hover:bg-violet-500 shadow-zinc-800 shadow-md  inline-block"
+            className={style}
         >{button_name}</a>
     )
 

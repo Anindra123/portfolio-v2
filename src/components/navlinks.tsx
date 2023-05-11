@@ -1,17 +1,18 @@
 import Link from "next/link"
 
 interface ILinkProps {
-    links: string[]
-    style: string
-
+    style: string,
+    parentStyle: string
 }
-const NavLinks = ({ links, style }: ILinkProps) => {
+
+const linkList: string[] = ['Skills', 'Resume', 'Contact', 'Projects']
+const NavLinks = ({ style, parentStyle }: ILinkProps) => {
     return (
-        <div className='flex-row justify-end md:flex hidden'
+        <div className={parentStyle}
 
         >
             {
-                links.map((val) => {
+                linkList.map((val) => {
                     return (
                         <Link key={val} href={`/${val.toLowerCase()}`} className={style}>{val}</Link>
                     )

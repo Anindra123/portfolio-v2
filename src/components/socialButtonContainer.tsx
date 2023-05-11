@@ -1,12 +1,15 @@
 import SocialButton from "./socialButton"
 
+interface IPropType {
+    style: string;
+}
 
-const SocialButtonContainer = () => {
+const SocialButtonContainer = ({ style }: IPropType) => {
 
     return (
 
-        <div className=' flex flex-row justify-evenly mb-10
-          '>
+        <div className={style}>
+
 
             <SocialButton icon_type='twitter' social_link='https://twitter.com/bivasDas93' />
             <SocialButton icon_type='facebook' social_link='https://www.facebook.com/profile.php?id=100086548803077' />
