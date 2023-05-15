@@ -4,10 +4,11 @@ import { FaTwitter, FaFacebook, FaLinkedinIn, FaGithub, } from "react-icons/fa"
 
 interface socialProps {
     icon_type: string,
-    social_link: string
+    social_link: string | undefined,
+    style: string
 }
 
-const SocialButton = ({ icon_type, social_link }: socialProps) => {
+const SocialButton = ({ icon_type, social_link, style }: socialProps) => {
     let iconMap = new Map<string, JSX.Element>();
 
     iconMap.set('facebook', <FaFacebook className="  group-hover:text-zinc-600" />)
@@ -16,7 +17,7 @@ const SocialButton = ({ icon_type, social_link }: socialProps) => {
     iconMap.set('github', <FaGithub className=" group-hover:text-zinc-600" />)
 
     return (
-        <a target="_blank" href={social_link} className=" w-8 h-8 rounded-full text-violet-300 flex items-center justify-center bg-zinc-600 outline-2 outline outline-violet-300 hover:bg-violet-300 hover:outline-zinc-600  transition-transform ease-linear hover:scale-150 group">
+        <a target="_blank" href={social_link} className={style}>
             {iconMap.get(icon_type)}
 
         </a>
